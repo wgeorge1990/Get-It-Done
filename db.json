@@ -2,28 +2,15 @@
     "posts": [
         {
             "id": 1,
-            "title": "json-server",
-            "author": "typicode"
+            "description": "Do a little dance.",
+            "estimatedTime": "undetermined",
+            "priority": "high"
         },
         {
-            "id": 2,
-            "title": "another post",
-            "author": "Mike"
+           "id": 2,
+            "description": "Take Dogs to the park.",
+            "estimatedTime": "2 hours",
+            "priority": "extremely high"
         }
-    ],
-    "comments": [
-        {
-            "id": 1,
-            "body": "some comment",
-            "postId": 1
-        },
-        {
-            "id": 2,
-            "body": "another comment",
-            "postId": 1
-        }
-    ],
-    "profile": {
-        "name": "typicode"
-    }
+    ]
 }
