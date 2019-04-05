@@ -1,16 +1,16 @@
 {
-    "posts": [
-        {
-            "id": 1,
-            "description": "Do a little dance.",
-            "estimatedTime": "undetermined",
-            "priority": "high"
-        },
-        {
-           "id": 2,
-            "description": "Take Dogs to the park.",
-            "estimatedTime": "2 hours",
-            "priority": "extremely high"
-        }
-    ]
+  "posts": [
+    {
+      "id": 1,
+      "description": "Do a little dance.",
+      "estimatedTime": "undetermined",
+      "priority": "high"
+    },
+    {
+      "description": "Take the dogs to the park",
+      "estimatedTime": "Two hours",
+      "priority": "Most Important",
+      "id": 2
+    }
+  ]
 }
