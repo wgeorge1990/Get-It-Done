@@ -11,6 +11,7 @@ function processForm(event) {
     let estTime = document.querySelector('#estTime').value
     let priority = document.querySelector('#priority').value
     addTodoItem(description, estTime, priority)
+    event.target.reset()
 }
 
 function addTodoItem(description, estTime, priority) {
