@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", setUpPage)
+console.log(1)
 
 function setUpPage() {
     console.log('this is a log from the intitial load of the dom')
@@ -16,24 +17,37 @@ function processForm(event) {
 }
 
 function loadTodoItems() {
-fetch("http://localhost:3000/posts").then(res => res.json()).then(data => saveData(data))
-}
-function saveData(data) {
-    let posts = data
-    console.log(posts)
-    posts.forEach(post => renderTodoItems(post))
+fetch("http://localhost:3000/posts")
+.then(res => res.json())
+.then(data => data.forEach(renderTodoItem))
 }
 
-function renderTodoItems(post) {
-   
+
+function renderTodoItem(post) {
+    console.log(post.id)
     let tableBody = document.querySelector('tbody')
+
     let html = ` <tr>
                 <td>${post.description}</td>
                 <td>${post.estimatedTime}</td>
                 <td>${post.priority}</td>
             </tr>`
-    tableBody.innerHTML += html
-}
+
+            //or
+
+    let alt = document.createElement('tr')
+    let des = document.createElement('td')
+    let est = document.createElement('td')
+    let pri = document.createElement('td')
+    des.innerText = post.description
+    est.innerText = post.estimatedTime
+    pri.innerText = post.priority
+    alt.appendChild(des)
+    alt.appendChild(est)
+    alt.appendChild(pri)
+    
+    tableBody.appendChild(alt)
+} 
 
 function addTodoItem(description, estTime, priority) {
 let tableBody = document.querySelector('tbody')
